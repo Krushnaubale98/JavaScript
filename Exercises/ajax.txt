@@ -1,0 +1,6 @@
+Ajaxt is no a programming language.
+
+Ajax is  a technique for creating fast and 
+
+
+sdynamic web pages.

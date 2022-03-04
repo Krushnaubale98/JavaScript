@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax change content</title>
+  </head>
+  <body>
+    <div id="ajax">
+      <h3>The XMLHTTPRequest Object`</h3>
+      <button onclick="demo()">Change Cntent</button>
+    </div>
+    <script>
+      function demo() {
+        var XHTTPR = new XMLHttpRequest();
+        XHTTPR.onreadystatechange = function () {
+          if (XHTTPR.status == 200 && XHTTPR.readyState == 4) {
+            document.getElementById("ajax").innerHTML = XHTTPR.responseText;
+          }
+        };
+    
+
+        XHTTPR.open("GET", "ajax.txt", true);
+        XHTTPR.send();
+      }
+    </script>
+  </body>
+</html>
